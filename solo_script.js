@@ -10,18 +10,42 @@ var array = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
 
 //Create variables used to write to the DOM
 var newEl, newText, position;
+
 //Capture the position of insertion into the DOM
 position = document.getElementById('content');
 
 //Loop the array, extracting each array and writing information to the DOM
 //Note that the information is not 'clean'
+// for(var i = 0; i < array.length; i++){
+// 	array[i] = calculateSTI(array);
+//  	newEl = document.createElement('li');
+// 	newText = document.createTextNode(array[i]);
+// 	newEl.appendChild(newText);
+// 	position.appendChild(newEl);
+// }
+
+// Shot at formatting
+// loop through each array item
 for(var i = 0; i < array.length; i++){
-	array[i] = calculateSTI(array);
- 	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
-	newEl.appendChild(newText);
-	position.appendChild(newEl);
+    // Run CalculateSTI on each array item
+    array[i] = calculateSTI(array);
+    //add list item to document
+    var j=0;
+    while(j < array.length){
+        newEl = document.createElement('li');
+        textNode = document.createTextNode(array[i][j]);
+        newEl.appendChild(textNode);
+        position.appendChild(newEl);
+        j++;
+    }
 }
+
+$('div').each(function(index){
+    this.innerHTML = myArray[index];
+});
+
+
+
 
 function calculateSTI(array1){
   var newArray = [];

@@ -1,3 +1,18 @@
-li{
-	list-style: none;
+li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    font-family: arial;
+    margin-bottom: 5px;
+    background-color: #ccc;
+    color: #333;
+    padding: 5px 0px;
+}
+ul {
+    background-color: #ccc;
+    height: 150px;
+    padding-top: 19px;
+    padding-left: 36px;
+    padding-right: 23px;
+    border-radius: 5px;
 }
