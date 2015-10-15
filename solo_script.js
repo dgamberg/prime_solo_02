@@ -40,13 +40,6 @@ for(var i = 0; i < array.length; i++){
     }
 }
 
-$('div').each(function(index){
-    this.innerHTML = myArray[index];
-});
-
-
-
-
 function calculateSTI(array1){
   var newArray = [];
 
